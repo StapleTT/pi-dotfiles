@@ -8,11 +8,7 @@ All packages & dependencies will automatically be installed.
 To get started, run the following commands:
 ```
 git clone https://github.com/StapleTT/pi-dotfiles
-```
-```
 cd pi-dotfiles
-```
-```
 ./install.sh
 ```
 NOTE: This script requires sudo privileges. Running this script without sudo privileges will break stuff.
