@@ -8,7 +8,7 @@ echo "Here we will create a backup of your .config directory and add the new dot
 
 sleep 2
 
-echo "" && "Checking sudo privileges once again..."
+echo "" && echo "Checking sudo privileges once again..."
 sudo echo "Sudo check!"
 
 # Create .config backup

@@ -11,7 +11,7 @@ echo ""
 
 echo "Checking sudo priviliges..."
 sleep 1
-sudo echo "Sudo check!"
+sudo echo "Sudo check!" || exit 0
 
 echo "" && echo "Installing packages..."
 
