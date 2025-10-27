@@ -12,7 +12,7 @@ echo "" && echo "Checking sudo privileges once again..."
 sudo echo "Sudo check!" || exit 0
 
 # Create .config backup
-echo "" && "Creating backup of ~/.config..."
+echo "" && echo "Creating backup of ~/.config..."
 CONFIG_DIR="$HOME/.config"
 
 if [ -d "$CONFIG_DIR/config_bak" ] ; then
