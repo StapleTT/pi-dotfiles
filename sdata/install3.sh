@@ -30,21 +30,24 @@ done
 sleep 2
 
 # Install greetd & sway
-echo "" && "Checking sudo privileges..."
-sudo echo "Sudo check!"
+echo "" && echo "Checking sudo privileges..."
+sudo echo "Sudo check!" || exit 0
 
 sleep 1
 
 # Install greetd & sway
 echo "" && echo "Installing greetd & sway..."
 sudo apt install greetd sway -y
+sleep 1 && echo "Done!"
 
 # Copy greetd config to /etc/greetd
 echo "" && echo "Copying greetd config to /etc/greetd..."
 sudo mkdir /etc/greetd
 sudo cp $DOTFILES_DIR/.etc/greetd/* /etc/greetd/
+sleep 1 && echo "Done!"
 
 # Disable lightdm and enable greetd
 echo "" && echo "Disabling lightdm and enabling greetd..."
 sudo systemctl disable lightdm.service
 sudo systemctl enable greetd.service
+sleep 1 && echo "Done!"

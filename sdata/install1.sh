@@ -7,9 +7,7 @@ echo "Welcome to step 1 of the install script."
 echo "Please note that this script will require sudo privileges to work properly."
 sleep 2
 
-echo ""
-
-echo "Checking sudo priviliges..."
+echo "" && echo "Checking sudo priviliges..."
 sleep 1
 sudo echo "Sudo check!" || exit 0
 
@@ -42,6 +40,7 @@ sudo make install
 
 sudo systemctl enable keyd
 sudo systemctl restart keyd
+sleep 1 && echo "Done!"
 
 # Install Rust via rustup if not already installed
 echo "" && echo "Installing Rust..."
@@ -49,18 +48,21 @@ if ! command -v rustup >/dev/null 2>&1 ; then
   curl https://sh.rustup.rs -sSf | sh -s -- -y
   source $HOME/.cargo/env
 fi
+sleep 1 && echo "Done!"
 
 # Install Starship
 echo "" && echo "Installing Starship..."
 if ! command -v starship >/dev/null 2>&1 ; then
   curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
+sleep 1 && echo "Done!"
 
 # Install eza via cargo
 echo "" && echo "Installing eza..."
 if ! command -v eza >/dev/null 2>&1 ; then
   cargo install eza
 fi
+sleep 1 && echo "Done!"
 
 # Install CascadiaCode Nerd Font
 echo "" && echo "Installing CascadiaCode Nerd Font..."
@@ -75,6 +77,7 @@ if [ ! -d "$FONT_DIR/CascadiaCodeNF" ] ; then
 fi
 
 fc-cache -fv >/dev/null
+sleep 1 && echo "Done!"
 
 # Move on to step 2 (copy .config and other files)
 cd $DOTFILES_DIR
