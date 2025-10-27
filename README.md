@@ -14,4 +14,5 @@ cd pi-dotfiles
 NOTE: This script requires sudo privileges. Running this script without sudo privileges will break stuff.
 
 ## Screenshots
-![screenshots/sway.png](https://github.com/StapleTT/pi-dotfiles/blob/4552c9c4470f5052100e1b239f6522240575db59/screenshots/sway.png "desktop screenshot")
+![screenshots/sway.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/sway.png?raw=true "desktop screenshot")
+![screemshots/desktop.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/desktop.png?raw=true "desktop screenshot 2")
