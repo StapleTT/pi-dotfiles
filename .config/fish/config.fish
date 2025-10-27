@@ -6,8 +6,8 @@ end
 
 alias history="history -r"
 alias vim="nvim"
-alias mksh="~/importantscripts/mksh.sh"
-alias rm="~/importantscripts/logremove.sh"
+# alias mksh="~/importantscripts/mksh.sh"
+# alias rm="~/importantscripts/logremove.sh"
 alias ls="eza --icons"
 
 # starship init fish | source
