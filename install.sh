@@ -27,7 +27,7 @@ while true ; do
       break
       ;;
     3)
-      echo "Exiting script.."
+      echo "Exiting script..."
       exit 1
       break
       ;;
@@ -46,6 +46,30 @@ case $INSTALL in
     ;;
   2)
     ./sdata/install1.sh --full
-    echo "" && echo "Install complete. Please reboot your pi for changes to take effect."
+    echo "" && echo "Install complete. A full reboot is required for changes to take effect."
+    while true ; do
+      read -p "Reboot now? [Y/n]: " input
+      case "$input" in
+        y)
+          sudo reboot now
+          break
+          ;;
+        Y)
+          sudo reboot now
+          break
+          ;;
+        "")
+          sudo reboot now
+          break
+          ;;
+        n)
+          exit 1
+          break
+          ;;
+        *)
+          echo "Invalid input, please try again."
+          ;;
+      esac
+    done
     ;;
 esac

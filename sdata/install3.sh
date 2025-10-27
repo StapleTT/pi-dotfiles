@@ -16,6 +16,11 @@ while true ; do
       exit 1
       break
       ;;
+    "N")
+      echo "Understood. Exiting step 3..."
+      exit 1
+      break
+      ;;
     "")
       echo "Understood. Exiting step 3..."
       exit 1
