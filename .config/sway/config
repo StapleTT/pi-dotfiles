@@ -76,6 +76,9 @@ output * bg ~/.config/sway/wallpaper.png fill
     # Open firefox
     bindsym $mod+w exec firefox
 
+    # Cheat Sheet
+    bindsym $mod+slash exec alacritty -e bash -c 'nvim ~/.config/sway/cheatsheet'
+
     # Rofi launcher
     bindsym $mod+space exec rofi -show run
 
