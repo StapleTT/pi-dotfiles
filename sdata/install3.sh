@@ -42,7 +42,7 @@ sleep 1
 
 # Install greetd & sway
 echo "" && echo "Installing greetd & sway..."
-sudo apt install greetd sway -y
+sudo apt install greetd sway rofi -y
 sleep 1 && echo "Done!"
 
 # Copy greetd config to /etc/greetd
