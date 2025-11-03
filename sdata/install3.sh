@@ -8,21 +8,21 @@ while true ; do
   read -p "This step will replace your login manager with greetd and replace your desktop environment with Sway. Are you sure you want to continue? [y/N] " input
   case "$input" in
     "y")
-      echo "Continuing with step 3..."
+      echo -e "\e[34mContinuing with step 3...\e[0m"
       break
       ;;
     "n")
-      echo "Understood. Exiting step 3..."
+      echo -e "\e[34mUnderstood. Exiting step 3...\e[0m"
       exit 1
       break
       ;;
     "N")
-      echo "Understood. Exiting step 3..."
+      echo -e "\e[34mUnderstood. Exiting step 3...\e[0m"
       exit 1
       break
       ;;
     "")
-      echo "Understood. Exiting step 3..."
+      echo -e "\e[34mUnderstood. Exiting step 3...\e[0m"
       exit 1
       break
       ;;
@@ -34,25 +34,26 @@ done
 
 sleep 2
 
-# Install greetd & sway
-echo "" && echo "Checking sudo privileges..."
-sudo echo "Sudo check!" || exit 0
+echo "" && echo -e "\e[34mChecking sudo privileges...\e[0m"
+sudo echo -e "\e[32mSudo check!\e[0m" || exit 0
 
 sleep 1
 
-# Install greetd & sway
-echo "" && echo "Installing greetd & sway..."
+# Install greetd, sway, & rofi
+echo "" && echo -e "\e[34mInstalling greetd, sway, & rofi...\e[0m"
 sudo apt install greetd sway rofi -y
-sleep 1 && echo "Done!"
+sleep 1 && echo -e "\e[32mDone!\e[0m"
 
 # Copy greetd config to /etc/greetd
-echo "" && echo "Copying greetd config to /etc/greetd..."
-sudo mkdir /etc/greetd
+echo "" && echo -e "\e[34mCopying greetd config to /etc/greetd...\e[0m"
+if [ ! -d /etc/greetd/ ] ; then
+  sudo mkdir /etc/greetd
+fi
 sudo cp $DOTFILES_DIR/.etc/greetd/* /etc/greetd/
-sleep 1 && echo "Done!"
+sleep 1 && echo -e "\e[32mDone!\e[0m"
 
 # Disable lightdm and enable greetd
-echo "" && echo "Disabling lightdm and enabling greetd..."
+echo "" && echo -e "\e[34mDisabling lightdm and enabling greetd...\e[0m"
 sudo systemctl disable lightdm.service
 sudo systemctl enable greetd.service
-sleep 1 && echo "Done!"
+sleep 1 && echo -e "\e[32mDone!\e[0m"
