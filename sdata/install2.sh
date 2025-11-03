@@ -15,9 +15,10 @@ sudo echo -e "\e[32mSudo check!\e[0m" || exit 0
 echo "" && echo -e "\e[34mCreating backup of ~/.config...\e[0m"
 CONFIG_DIR="$HOME/.config"
 
-if [ -d "$CONFIG_DIR/.config_bak" ] ; then
-  sudo rm -rf "$CONFIG_DIR/.config_bak"
+if [ -d "$HOME/.config_bak" ] ; then
+  sudo rm -rf "$HOME/.config_bak"
 fi
+mkdir "$HOME/.config_bak"
 sudo mv $CONFIG_DIR/* "$HOME/.config_bak/"
 sleep 1 && echo -e "\e[32mDone!\e[0m"
 
