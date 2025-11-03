@@ -18,7 +18,7 @@ CONFIG_DIR="$HOME/.config"
 if [ -d "$CONFIG_DIR/.config_bak" ] ; then
   sudo rm -rf "$CONFIG_DIR/.config_bak"
 fi
-sudo mv "$CONFIG_DIR/*" "$HOME/.config_bak/"
+sudo mv $CONFIG_DIR/* "$HOME/.config_bak/"
 sleep 1 && echo -e "\e[32mDone!\e[0m"
 
 # Copy dotfiles to ~/.config
