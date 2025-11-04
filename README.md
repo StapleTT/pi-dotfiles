@@ -1,11 +1,11 @@
 # pi-dotfiles
 
 This script helps set up your development environment by automating the installation and configuration of various tools:
-- **Alacritty & Fish Shell**: Installs the Alacritty terminal and sets Fish as your default shell, enhanced with the Starship prompt for a modern, user-friendly experience.
+- **Alacritty & Fish Shell**: Installs the [Alacritty](https://github.com/alacritty/alacritty) terminal and sets [fish](https://github.com/fish-shell/fish-shell) as your default shell, enhanced with [Starship](https://github.com/starship/starship) for a modern, user-friendly experience.
 - **Neovim Configuration**: Installs and configures Neovim with syntax highlighting, autocomplete, and several other plugins.
-- **Caps Lock to Escape**: Remaps the Caps Lock key to Escape using `keyd` for more efficient text editing.
-- **Enhanced File Listing with `eza`**: Displays file icons in the terminal when using `ls`, making file navigation more intuitive.
-- **[Optional] Greetd & Sway**: Replaces your desktop and login manager with Greetd and Sway, offering a minimal and efficient window manager setup (shown in screenshots below).
+- **Caps Lock to Escape**: Remaps the Caps Lock key to Escape using [keyd](https://github.com/rvaiya/keyd) for more efficient text editing.
+- **Enhanced File Listing with [eza](https://github.com/eza-community/eza)**: Displays file icons in the terminal when using `ls`, making file navigation more intuitive.
+- **[Optional] Greetd & Sway**: Replaces your desktop and login manager with [greetd](https://github.com/kennylevinsen/greetd) and [sway](https://github.com/swaywm/sway), offering a minimal and efficient window manager setup (shown in screenshots below).
 
 During installation, you’ll have the choice to either install the dotfiles only or to include the optional desktop replacement.
 
