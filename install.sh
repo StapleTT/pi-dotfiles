@@ -2,7 +2,7 @@
 
 clear
 
-echo -e "\e[34m[$0]\e[0m: Hi there! Before we start, you should know exactly what you're running. This script will:"
+echo -e "\e[94m[$0]\e[0m: Hi there! Before we start, you should know exactly what you're running. This script will:"
 echo ' - Replace your existing terminal and shell with Alacritty & Fish'
 echo ' - Install & configure Neovim'
 echo ' - Rebind Caps Lock to Escape'
@@ -19,17 +19,17 @@ while true ; do
   read -p "Enter an option: " input
   case "$input" in
     1)
-      echo -e "\e[34mContinuing with ./sdata/install1.sh...\e[0m"
+      echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
       INSTALL=1
       break
       ;;
     2)
-      echo -e "\e[34mContinuing with ./sdata/install1.sh...\e[0m"
+      echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
       INSTALL=2
       break
       ;;
     3)
-      echo -e "\e[34mExiting script..."
+      echo -e "\e[94mExiting script..."
       exit 1
       break
       ;;
@@ -44,11 +44,11 @@ echo ""
 case $INSTALL in
   1)
     ./sdata/install1.sh --partial
-    echo "" && echo -e "\e[32mInstall complete. Please log out and log back in for changes to take effect."
+    echo "" && echo -e "\e[92mInstall complete. Please log out and log back in for changes to take effect."
     ;;
   2)
     ./sdata/install1.sh --full
-    echo "" && echo -e "\e[32mInstall complete. A full reboot is required for changes to take effect.\e[0m"
+    echo "" && echo -e "\e[92mInstall complete. A full reboot is required for changes to take effect.\e[0m"
     while true ; do
       read -p "Reboot now? [Y/n]: " input
       case "$input" in

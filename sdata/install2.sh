@@ -8,11 +8,11 @@ echo "Here we will create a backup of your .config directory and add the new dot
 
 sleep 2
 
-echo "" && echo -e "\e[34mChecking sudo privileges once again...\e[0m"
-sudo echo -e "\e[32mSudo check!\e[0m" || exit 0
+echo "" && echo -e "\e[94mChecking sudo privileges once again...\e[0m"
+sudo echo -e "\e[92mSudo check!\e[0m" || exit 0
 
 # Create .config backup
-echo "" && echo -e "\e[34mCreating backup of ~/.config...\e[0m"
+echo "" && echo -e "\e[94mCreating backup of ~/.config...\e[0m"
 CONFIG_DIR="$HOME/.config"
 
 if [ -d "$HOME/.config_bak" ] ; then
@@ -20,28 +20,28 @@ if [ -d "$HOME/.config_bak" ] ; then
 fi
 mkdir "$HOME/.config_bak"
 sudo mv $CONFIG_DIR/* "$HOME/.config_bak/"
-sleep 1 && echo -e "\e[32mDone!\e[0m"
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Copy dotfiles to ~/.config
-echo "" && echo -e "\e[34mCopying dotfiles to ~/.config...\e[0m"
+echo "" && echo -e "\e[94mCopying dotfiles to ~/.config...\e[0m"
 sudo cp -r $DOTFILES_DIR/.config/* $CONFIG_DIR/
-sleep 1 && echo -e "\e[32mDone!\e[0m"
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Copy keyd config to /etc/keyd/
-echo "" && echo -e "\e[34mCopying keyd config to /etc/keyd...\e[0m"
+echo "" && echo -e "\e[94mCopying keyd config to /etc/keyd...\e[0m"
 if [ ! -d /etc/keyd/ ] ; then
   sudo mkdir /etc/keyd
 fi
 sudo cp $DOTFILES_DIR/.etc/keyd/* /etc/keyd/
 sudo systemctl restart keyd
-sleep 1 && echo -e "\e[32mDone!\e[0m"
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 case "$1" in
   "--partial")
     exit 1
     ;;
   "--full")
-    echo "" && echo -e "\e[34mMoving on to step 3...\e[0m"
+    echo "" && echo -e "\e[94mMoving on to step 3...\e[0m"
     sleep 2
     cd $DOTFILES_DIR
     ./sdata/install3.sh
