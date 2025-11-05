@@ -38,9 +38,9 @@ echo "" && echo -e "\e[94mChecking sudo privileges...\e[0m"
 sudo echo -e "\e[92mSudo check!\e[0m" || 'echo "\e[91mSudo check failed. Exiting script..." && exit 0'
 sleep 1
 
-# Install greetd, sway, & rofi
-echo "" && echo -e "\e[94mInstalling greetd, sway, & rofi...\e[0m"
-sudo apt install greetd sway rofi -y
+# Install remaining packages
+echo "" && echo -e "\e[94mInstalling remaining packages...\e[0m"
+sudo apt install greetd sway rofi waybar -y
 sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Copy greetd config to /etc/greetd
