@@ -78,10 +78,11 @@ fi
 
 fc-cache -fv >/dev/null
 sleep 1 && echo -e "\e[92mDone!\e[0m"
+sleep 1
 
 # Move on to step 2 (copy .config and other files)
 cd $DOTFILES_DIR
-echo "" && echo "\e[94mMoving on to step 2...\e[0m"
+echo "" && echo "\e[94mMoving on to step 2...\e[0m" && sleep 3
 case "$1" in
   "--partial")
     ./sdata/install2.sh --partial

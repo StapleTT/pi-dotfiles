@@ -35,6 +35,7 @@ fi
 sudo cp $DOTFILES_DIR/.etc/keyd/* /etc/keyd/
 sudo systemctl restart keyd
 sleep 1 && echo -e "\e[92mDone!\e[0m"
+sleep 1
 
 case "$1" in
   "--partial")
@@ -42,7 +43,7 @@ case "$1" in
     ;;
   "--full")
     echo "" && echo -e "\e[94mMoving on to step 3...\e[0m"
-    sleep 2
+    sleep 3
     cd $DOTFILES_DIR
     ./sdata/install3.sh
     ;;
