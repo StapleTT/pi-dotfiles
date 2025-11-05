@@ -35,8 +35,7 @@ done
 sleep 2
 
 echo "" && echo -e "\e[94mChecking sudo privileges...\e[0m"
-sudo echo -e "\e[92mSudo check!\e[0m" || exit 0
-
+sudo echo -e "\e[92mSudo check!\e[0m" || echo "\e[91mSudo check failed. Exiting script..." && exit 0
 sleep 1
 
 # Install greetd, sway, & rofi
