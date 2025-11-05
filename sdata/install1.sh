@@ -9,7 +9,7 @@ sleep 2
 
 echo "" && echo -e "\e[94mChecking sudo privileges...\e[0m"
 sleep 1
-sudo echo -e "\e[92mSudo check!\e[0m" || echo "\e[91mSudo check failed. Exiting script..." && exit 0
+sudo echo -e "\e[92mSudo check!\e[0m" || 'echo "\e[91mSudo check failed. Exiting script..." && exit 0'
 
 echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 

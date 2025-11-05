@@ -9,7 +9,7 @@ echo "Here we will create a backup of your .config directory and add the new dot
 sleep 2
 
 echo "" && echo -e "\e[94mChecking sudo privileges once again...\e[0m"
-sudo echo -e "\e[92mSudo check!\e[0m" || echo "\e[91mSudo check failed. Exiting script..." && exit 0
+sudo echo -e "\e[92mSudo check!\e[0m" || 'echo "\e[91mSudo check failed. Exiting script..." && exit 0'
 
 # Create .config backup
 echo "" && echo -e "\e[94mCreating backup of ~/.config...\e[0m"
