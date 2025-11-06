@@ -17,7 +17,27 @@ echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 sudo apt install curl git -y
 
 # Install packages for partial config
-sudo apt install alacritty fish neovim -y
+sudo apt install alacritty fish -y
+
+# Clone & install neovim
+echo "" && echo -e "\e[94mInstalling dependencies for neovim...\e[0m"
+sudo apt install build-essential cmake libtool autoconf automake libncurses5-dev g++
+
+echo "" && echo -e "\e[94mCloning repository...\e[0m"
+NVIM_DIR="$HOME/.local/src/neovim"
+if [ ! -d "$NVIM_DIR" ] ; then
+  git clone https://github.com/neovim/neovim.git "$NVIM_DIR"
+else
+  git -C "$NVIM_DIR" pull
+fi
+
+# Build & install
+cd "$NVIM_DIR"
+echo "" && echo -e "\e[94mBuilding neovim...\e[0m"
+make CMAKE_BUILD_TYPE=Release
+echo "" && echo -e "\e[94mInstalling neovim...\e[0m"
+sudo make install
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Clone & install keyd
 echo "" && echo -e "\e[94mInstalling dependencies for keyd...\e[0m"
