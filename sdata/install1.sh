@@ -34,7 +34,7 @@ fi
 # Build & install
 cd "$NVIM_DIR"
 echo "" && echo -e "\e[94mBuilding neovim...\e[0m"
-make
+make CMAKE_BUILD_TYPE=Release
 echo "" && echo -e "\e[94mInstalling neovim...\e[0m"
 sudo make install
 sleep 1 && echo -e "\e[92mDone!\e[0m"
