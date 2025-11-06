@@ -82,7 +82,7 @@ sleep 1
 
 # Move on to step 2 (copy .config and other files)
 cd $DOTFILES_DIR
-echo "" && echo "\e[94mMoving on to step 2...\e[0m" && sleep 3
+echo "" && echo -e "\e[94mMoving on to step 2...\e[0m" && sleep 3
 case "$1" in
   "--partial")
     ./sdata/install2.sh --partial
