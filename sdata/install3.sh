@@ -35,8 +35,12 @@ done
 sleep 2
 
 echo "" && echo -e "\e[94mChecking sudo privileges...\e[0m"
-sudo echo -e "\e[92mSudo check!\e[0m" || exit 0
 sleep 1
+if ! sudo -v &>/dev/null ; then
+  ./sdata/finish.sh --fail
+else
+  echo -e "\e[92mSudo check!\e[0m"
+fi
 
 # Install remaining packages
 echo "" && echo -e "\e[94mInstalling remaining packages...\e[0m"

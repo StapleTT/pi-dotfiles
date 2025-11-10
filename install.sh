@@ -20,12 +20,12 @@ while true ; do
   case "$input" in
     1)
       echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
-      INSTALL=1
+      ./sdata/install1.sh --partial
       break
       ;;
     2)
       echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
-      INSTALL=2
+      ./sdata/install1.sh --full
       break
       ;;
     3)
@@ -38,40 +38,3 @@ while true ; do
       ;;
   esac
 done
-
-echo ""
-
-case $INSTALL in
-  1)
-    ./sdata/install1.sh --partial
-    echo "" && echo -e "\e[92mInstall complete. Please log out and log back in for changes to take effect."
-    ;;
-  2)
-    ./sdata/install1.sh --full
-    echo "" && echo -e "\e[92mInstall complete. A full reboot is required for changes to take effect.\e[0m"
-    while true ; do
-      read -p "Reboot now? [Y/n]: " input
-      case "$input" in
-        y)
-          sudo reboot now
-          break
-          ;;
-        Y)
-          sudo reboot now
-          break
-          ;;
-        "")
-          sudo reboot now
-          break
-          ;;
-        n)
-          exit 1
-          break
-          ;;
-        *)
-          echo "Invalid input, please try again."
-          ;;
-      esac
-    done
-    ;;
-esac
