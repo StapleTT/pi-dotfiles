@@ -43,7 +43,8 @@ sleep 1
 
 case "$1" in
   "--partial")
-    exit 1
+    cd $DOTFILES_DIR
+    ./sdata/finish.sh --partial
     ;;
   "--full")
     echo "" && echo -e "\e[94mMoving on to step 3...\e[0m"
