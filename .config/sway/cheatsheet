@@ -12,7 +12,11 @@ $mod + [arrow keys/hjkl] = change between windows
 $mod + shift + [arrow keys/hjkl] = move windows
 $mod + B = split windows horizontally
 $mod + V = split windows vertically
+$mod + R = resize mode
 
 # Workspace Management
 $mod + [1-9] = change workspaces
 $mod + shift [1-9] = move selected window to workspace
+
+# Others
+$mod + shift + E = exit sway
