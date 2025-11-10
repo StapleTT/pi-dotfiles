@@ -25,7 +25,7 @@ sudo apt install alacritty fish -y
 
 # Clone & install neovim
 echo "" && echo -e "\e[94mInstalling dependencies for neovim...\e[0m"
-sudo apt install build-essential cmake libtool autoconf automake libncurses5-dev g++
+sudo apt install build-essential cmake libtool autoconf automake libncurses5-dev g++ -y
 
 echo "" && echo -e "\e[94mCloning repository...\e[0m"
 NVIM_DIR="$HOME/.local/src/neovim"
