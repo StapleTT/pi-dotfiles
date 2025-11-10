@@ -20,11 +20,13 @@ while true ; do
   case "$input" in
     1)
       echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
+      sleep 3
       ./sdata/install1.sh --partial
       break
       ;;
     2)
       echo -e "\e[94mContinuing with ./sdata/install1.sh...\e[0m"
+      sleep 3
       ./sdata/install1.sh --full
       break
       ;;
