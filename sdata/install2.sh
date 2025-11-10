@@ -28,7 +28,7 @@ sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Copy dotfiles to ~/.config
 echo "" && echo -e "\e[94mCopying dotfiles to ~/.config...\e[0m"
-sudo cp -r $DOTFILES_DIR/.config/* $CONFIG_DIR/
+cp -r $DOTFILES_DIR/.config/* $CONFIG_DIR/
 sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Copy keyd config to /etc/keyd/
