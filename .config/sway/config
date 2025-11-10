@@ -29,7 +29,7 @@ include /etc/sway/config-vars.d/*
 seat * hide_cursor 1000
 
 # Start waybar
-exec waybar
+# exec waybar
 
 ### Output configuration
 #
@@ -213,6 +213,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# Waybar
+bar {
+    swaybar_command waybar
+}
 
 #
 # Status Bar:
