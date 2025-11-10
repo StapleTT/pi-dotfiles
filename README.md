@@ -1,7 +1,7 @@
 # pi-dotfiles
 
 This script helps set up your development environment by automating the installation and configuration of various tools:
-- **Alacritty & Fish Shell**: Installs the [Alacritty](https://github.com/alacritty/alacritty) terminal and sets [fish](https://github.com/fish-shell/fish-shell) as your default shell, enhanced with [Starship](https://github.com/starship/starship) for a modern, user-friendly experience.
+- **Foot & Fish Shell**: Installs the [foot](https://codeberg.org/dnkl/foot) terminal and sets [fish](https://github.com/fish-shell/fish-shell) as your default shell, enhanced with [Starship](https://github.com/starship/starship) for a modern, user-friendly experience.
 - **Neovim Configuration**: Installs and configures Neovim with syntax highlighting, autocomplete, and several other plugins.
 - **Caps Lock to Escape**: Remaps the Caps Lock key to Escape using [keyd](https://github.com/rvaiya/keyd) for more efficient text editing.
 - **Enhanced File Listing with [eza](https://github.com/eza-community/eza)**: Displays file icons in the terminal when using `ls`, making file navigation more intuitive.
