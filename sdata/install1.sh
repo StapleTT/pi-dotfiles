@@ -21,7 +21,7 @@ echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 sudo apt install curl git -y
 
 # Install packages for partial config
-sudo apt install alacritty fish -y
+sudo apt install foot fish -y
 
 # Clone & install neovim
 echo "" && echo -e "\e[94mInstalling dependencies for neovim...\e[0m"

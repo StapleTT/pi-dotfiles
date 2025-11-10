@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -83,7 +83,7 @@ output * bg ~/.config/sway/swaypaper.png fill
     bindsym $mod+w exec firefox
 
     # Cheat Sheet
-    bindsym $mod+slash exec alacritty -e bash -c 'nvim ~/.config/sway/cheatsheet'
+    bindsym $mod+slash exec $term -e bash -c 'nvim ~/.config/sway/cheatsheet'
 
     # Rofi launcher
     bindsym $mod+space exec rofi -show run
