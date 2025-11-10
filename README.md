@@ -21,5 +21,5 @@ cd pi-dotfiles
 ```
 
 ## Screenshots
-![screenshots/sway.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/multitask.png?raw=true "desktop screenshot")
-![screemshots/desktop.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/cheatsheet.png?raw=true "desktop screenshot 2")
+![screenshots/sway.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/hollywood.png?raw=true "desktop screenshot")
+![screemshots/desktop.png](https://github.com/StapleTT/pi-dotfiles/blob/master/screenshots/cheatsheet2.png?raw=true "desktop screenshot 2")
