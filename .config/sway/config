@@ -219,6 +219,10 @@ bar {
     swaybar_command waybar
 }
 
+# Remove title bar
+default_border pixel
+default_floating_border pixel
+
 #
 # Status Bar:
 #
