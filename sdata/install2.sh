@@ -11,6 +11,7 @@ sleep 2
 echo "" && echo -e "\e[94mChecking sudo privileges once again...\e[0m"
 if ! sudo -v &>/dev/null ; then
   ./sdata/finish.sh --fail
+  exit 126
 else
   echo -e "\e[92mSudo check!\e[0m"
 fi
