@@ -21,7 +21,28 @@ echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 sudo apt install curl git -y
 
 # Install packages for partial config
-sudo apt install foot fish -y
+sudo apt install fish -y
+
+# Clone & install foot
+echo "" && echo -e "\e[94mInstalling dependencies for foot...\e[0m"
+sudo apt install -y meson ninja-build scdoc wayland-protocols pkg-config libwayland-dev libxkbcommon-dev libpixman-1-dev libfcft-dev uthash-dev check
+
+echo "" && echo -e "\e[94mCloning repository...\e[0m"
+FOOT_DIR="$HOME/.local/src/foot"
+if [ ! -d "$FOOT_DIR" ] ; then
+  git clone https://codeberg.org/dnkl/foot.git "$FOOT_DIR"
+else
+  git -C "$FOOT_DIR" pull
+fi
+
+# Build & install
+cd "$FOOT_DIR"
+echo "" && echo -e "\e[94mBuilding foot...\e[0m"
+meson setup build
+ninja -C build
+echo "" && echo -e "\e[94mInstalling foot...\e[0m"
+sudo ninja -C build install
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 # Clone & install neovim
 echo "" && echo -e "\e[94mInstalling dependencies for neovim...\e[0m"
