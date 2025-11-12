@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# cd to actual installer directory
+cd "$(dirname "$(realpath "$0")")" || exit 1
+
 clear
 
 echo -e "\e[94m[$0]\e[0m: Hi there! Before we start, you should know exactly what you're running. This script will:"
