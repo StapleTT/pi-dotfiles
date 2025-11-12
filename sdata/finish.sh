@@ -35,5 +35,5 @@ case $1 in
   "--fail")
     echo "" && echo -e "\e[91mSudo check failed. Do you have the right permissions?\e[0m"
     echo "Script exited with code 126."
-    exit 126
+    ;;
 esac
