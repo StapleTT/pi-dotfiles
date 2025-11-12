@@ -6,7 +6,7 @@ cd "$(dirname "$(realpath "$0")")" || exit 1
 clear
 
 echo -e "\e[94m[$0]\e[0m: Hi there! Before we start, you should know exactly what you're running. This script will:"
-echo ' - Replace your existing terminal and shell with Alacritty & Fish'
+echo ' - Replace your existing terminal and shell with Foot & Fish'
 echo ' - Install & configure Neovim'
 echo ' - Rebind Caps Lock to Escape'
 echo ' - [OPTIONAL] Replace your existing desktop/login manager with Greetd & Sway'
