@@ -16,11 +16,14 @@ else
   echo -e "\e[92mSudo check!\e[0m"
 fi
 
-echo "" && echo -e "\e[94mInstalling packages...\e[0m"
+# Update system
+echo "" && echo -e "\e[94mPerforming system update...\e[0m"
+sudo apt update && sudo apt upgrade -y
+sleep 1 && echo -e "\e[92mDone!\e[0m"
 
+echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 # Install curl & git
 sudo apt install curl git -y
-
 # Install packages for partial config
 sudo apt install fish -y
 
