@@ -118,6 +118,11 @@ echo "" && echo -e "\e[94mInstalling CascadiaCode Nerd Font...\e[0m"
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 
+# Install unzip if not installed already
+if ! command -v unzip >/dev/null 2>&1 ; then
+  sudo apt install unzip -y
+fi
+
 cd "$FONT_DIR"
 if [ ! -d "$FONT_DIR/CascadiaCodeNF" ] ; then
   wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip -O CascadiaCode.zip
